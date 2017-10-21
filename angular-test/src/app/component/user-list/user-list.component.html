@@ -1,0 +1,18 @@
+<!-- <mat-list>
+  <mat-list-item   *ngFor="let user of users">
+    <img mat-list-avatar *ngIf="user.picture.thumbnail" [src]="user.picture.thumbnail"  (click) = "onClick()" >
+    <p mat-line>Nombre: {{user.name.first}}</p>
+    <h4 mat-line> Correo: {{user.email}}</h4>
+    <h4 mat-line> Telefono: {{user.phone}}</h4>
+  </mat-list-item>
+</mat-list> -->
+
+<mat-list>
+  <app-user-list-item *ngFor="let user of users" [user]="user">
+  </app-user-list-item>
+</mat-list>
+
+<pre>
+  {{ users|json }}
+
+</pre>

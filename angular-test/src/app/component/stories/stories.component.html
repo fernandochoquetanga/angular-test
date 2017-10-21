@@ -1,0 +1,26 @@
+ Today's top stories
+<div>
+  <button mat-button color="primary" (click)="onClick()">
+    Add storie
+  </button>
+</div>
+<div>
+
+
+
+  <mat-list>
+    <app-stories-list-item *ngFor="let storie of stories" [storie]="storie">
+          </app-stories-list-item> 
+  </mat-list>
+
+  <!--  <mat-list>
+    <mat-list-item *ngFor="let storie of stories">
+      <p mat-line>Title: {{storie.title}}</p>
+      <p mat-line>Description: {{storie.body}}</p>
+    </mat-list-item>
+  </mat-list> -->
+
+</div>
+<pre>
+{{stories|json}}
+</pre>
